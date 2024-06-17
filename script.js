@@ -102,7 +102,10 @@ function toggleMute() {
   }
 }
 
-// Change Playback Speed -------------------- //
+// Change Playback Speed -------------------- //\
+function changeSpeed() {
+  video.playbackRate = speed.value;
+}
 
 // Fullscreen ------------------------------- //
 
@@ -114,3 +117,4 @@ video.addEventListener('canplay', updateProgress);
 progressRange.addEventListener('click', setProgress);
 volumeRange.addEventListener('click', changeVolume);
 volumeIcon.addEventListener('click', toggleMute);
+speed.addEventListener('change', changeSpeed);
